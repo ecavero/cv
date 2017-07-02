@@ -1,0 +1,183 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LaTeX Template: Curriculum Vitae
+%
+% Source: http://www.howtotex.com/
+% Feel free to distribute this template, but please keep the
+% referal to HowToTeX.com.
+% Date: July 2011
+%Version for spanish users, by dgarhdez
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% How to use writeLaTeX: 
+%
+% You edit the source code here on the left, and the preview on the
+% right shows you the result within a few seconds.
+%
+% Bookmark this page and share the URL with your co-authors. They can
+% edit at the same time!
+%
+% You can upload figures, bibliographies, custom classes and
+% styles using the files menu.
+%
+% If you're new to LaTeX, the wikibook is a great place to start:
+% http://en.wikibooks.org/wiki/LaTeX
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
+							
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[protrusion=true,expansion=true]{microtype}
+\usepackage{amsmath,amsfonts,amsthm}     % Math packages
+\usepackage{graphicx}                    % Enable pdflatex
+\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
+\usepackage{geometry}
+	\textheight=700px                    % Saving trees ;-)
+\usepackage{url}
+\usepackage{float}
+\usepackage{wrapfig}
+\restylefloat{figure}
+
+\frenchspacing              % Better looking spacings after periods
+\pagestyle{empty}           % No pagenumbers/headers/footers
+
+%%% Custom sectioning (sectsty package)
+%%% ------------------------------------------------------------
+\usepackage{sectsty}
+
+\sectionfont{%			            % Change font of \section command
+	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
+	\sectionrule{0pt}{0pt}{-5pt}{1pt}}
+
+%%% Macros
+%%% ------------------------------------------------------------
+\newlength{\spacebox}
+\settowidth{\spacebox}{8888888888}			% Box to align text
+\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
+
+\newcommand{\MyName}[1]{ % Name
+		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
+		\par \normalsize \normalfont}
+		
+\newcommand{\MySlogan}[1]{ % Slogan (optional)
+		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
+		\par \normalsize \normalfont}
+
+\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
+
+\newcommand{\PersonalEntry}[2]{
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}		       % Entry name (birth, address, etc.)
+		\hspace{8em} #2 \par}    % Entry value
+
+\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
+		\noindent\hangindent=2em\hangafter=0 % Indentation
+		\parbox{\spacebox}{        % Box to align text
+		\textit{#1}}			   % Entry name (birth, address, etc.)
+		\hspace{1.5em} #2 \par}    % Entry value	
+		
+\newcommand{\EducationEntry}[4]{
+		\noindent \textbf{#1} \hfill      % Study
+		\colorbox{White}{%
+			\parbox{5cm}{%
+			\hfill\color{Black}#2}} \par  % Duration
+		\noindent \textit{#3} \par        % School
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
+		\noindent \textbf{#1} \hfill      % Jobname
+		\noindent\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Company
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
+%%% Begin Document
+%%% ------------------------------------------------------------
+\begin{document}
+
+% you can upload a photo and include it here...
+\begin{center}
+	%\includegraphics[width=0.15\textwidth]{guise.jpg}
+\end{center}
+
+
+\MyName{Eduardo Cavero Guzmán}
+\sepspace
+
+%%% Personal details
+%%% ------------------------------------------------------------
+\NewPart{Datos personales}{}
+
+\PersonalEntry{Dni}{40126410}
+\PersonalEntry{Nacimiento}{7 de febrero, 1979}
+\PersonalEntry{Dirección}{Res. Santa Cruz Block O Dpto. 403 San Isidro}
+\PersonalEntry{Teléfono}{(+51) 989 374 805}
+\PersonalEntry{E--Mail}{\url{ecavero@gmail.com}}
+
+
+%%% Education
+%%% ------------------------------------------------------------
+\NewPart{Estudios}{}
+
+\EducationEntry{Ingeniería de Sistemas e Informática}{1998 - presente}{Universidad Alas Peruanas}{}
+\sepspace
+
+
+%%% Work experience
+%%% ------------------------------------------------------------
+\NewPart{Experiencia laboral}{}
+
+\EducationEntry{Analista de Sistemas}{Setiembre 2012 - presente}{Grupo Vital}{
+\begin{itemize}
+\item{Parte del equipo de desarrollo del Sismedic.com \url{www.sismedic.com.pe} (sistema médico ocupacional web).}
+\item{He desarrollado mostrar el audiograma en el examen de Audiometría, el cuadro comparativo e informe del examen en Word.}
+\item{He desarrollado la comunicación entre el softaware del audiómetro con el módulo de audiometría para que carguen los datos del examen.}
+\item{He desarrollado la comunicación entre el software del espirómetro con el módulo de espirometría.}
+\item{He desarrollado la base para el reemplazo de etiquetas en los informes ocupacionales en Word. También he desarrollado la base para la impresión masiva de estos documentos en un solo archivo.}
+\item{He apoyado en el desarrollo de una aplicación de escritorio en Java que permite a los auditores médicos imprimir los consentimientos, informes de exámenes e informes finales.}
+\item{He desarrollado la comunicación entre el software del lector de firma y huella con el módulo de citas.}
+\end{itemize}
+}
+\sepspace
+
+\EducationEntry{Programador}{Mayo 2008 - Agosto 2012}{Universidad Ricardo Palma}{
+\begin{itemize}
+\item{Desarrollo y mantenimiento de los sistemas de información, especialmente el sistema de matrícula.}
+\item{Desarrollé un módulo para la migración de los datos de los alumnos del sistema académico al Aula Virtual de la universidad. Las bases de datos fueron SQL Server 2000 y MySQL 5 respectivamente.}
+\end{itemize}
+}
+\sepspace
+
+\NewPart{Conocimientos}{}{}{
+\begin{itemize}
+\item{Inglés: Escrito Nativo}
+\item{Inglés: Oral Nativo}
+\item{EJB: Semi Senior}
+\item{HTML: Semi Senior}
+\item{JEE: Semi Senior}
+\item{JSE: Senior}
+\item{Java: Senior}
+\item{JSP:  Senior}
+\item{JSF/PrimeFaces: Semi Senior}
+\item{MS T-SQL: Junior}
+\item{Linux: Junior}
+\item{PC Windows 7: Junior}
+
+\end{itemize}
+}
+
+\NewPart{Temas de Interés}{}{}{
+\begin{itemize}
+\item{Groovy: Lenguaje de programación dinámica que corre en la JVM con el cual se pueden hacer scripts, aplicaciones de escritorio y aplicaciones web.}
+\item{Grails: Framework para desarrollo de aplicaciones web basado en Groovy.}
+\item{Test Driven Development (TDD): Práctica de Ingenería de Software que consiste en escribir las pruebas de una funcionalidad primero, luego implementar dicha funcionalidad y finalmente refactorizar.}
+\item{Bitcoin: Moneda digital descentralizada y programable. Esto abrió el camino a lo que ahora se conoce como la tecnología Blockchain.}
+\item{Docker: Una plataforma para que desarrolladores y administradores de sistemas puedan construir, desplegar y ejecutar aplicaciones distribuidas, ya sea en laptops, máquinas virtuales en producción o en la nube.}
+\item{LaTex: Sistema de composición de textos, orientado a la creación de documentos. Es usado para la generación de artículos y libros científicos que incluyen, entre otros elementos, expresiones matemáticas.}
+\end{itemize}
+}
+
+\end{document}
+
