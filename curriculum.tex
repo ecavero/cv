@@ -69,7 +69,7 @@
 		\noindent\hangindent=2em\hangafter=0 % Indentation
 		\parbox{\spacebox}{        % Box to align text
 		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{8em} #2 \par}    % Entry value
+		\hspace{4em} #2 \par}    % Entry value
 
 \newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
 		\noindent\hangindent=2em\hangafter=0 % Indentation
@@ -97,6 +97,7 @@
 %%% ------------------------------------------------------------
 \begin{document}
 
+
 % you can upload a photo and include it here...
 \begin{center}
 	%\includegraphics[width=0.15\textwidth]{guise.jpg}
@@ -106,38 +107,89 @@
 \MyName{Eduardo Cavero Guzmán}
 \sepspace
 
+\begin{abstract}
+
+Soy un programador de Java y Groovy enfocado principalmente en aplicar la tecnología de la información para resolver problemas. 
+Disfruto aprender y mantenerme al día con la tecnología y la programación a través de tutoriales en sitios web y seminarios en YouTube. 
+Aprendí inglés desde muy joven y he vivido en Canadá durante unos 3 años, en Uganda durante 4 años y en Zimbabue durante unos 4 años y medio. 
+Tengo dieciseis años de experiencia en Java y casi veinte en programación en general. Mi primer trabajo consistía en ingresar datos en un programa kardex, 
+y terminé escribiendo un pequeño programa en VBA en Excel para semi-automatizar el proceso de registro. 
+Me considero un aprendiz rápido y siempre busco y utilizo la herramienta más adecuada para el trabajo o problema en cuestión. 
+También estoy interesado en otras tecnologías y proyectos como Groovy, Grails, Desarrollo Basado en Pruebas, Bitcoin, Docker y LaTeX.
+
+\sepspace
+
+I’m a Java and Groovy programmer primarily focused on applying information technology to solve problems. 
+I enjoy learning and staying up to date with technology and programming through tutorials on websites and webinars on YouTube. 
+I learned English at a very young age and have lived in Canada for about 3 years, Uganda for 4 years, and Zimbabwe for about 4 and a half years. 
+I have sixteen years of experience in Java and almost twenty in programming overall. My first job involved filling in data to a kardex program, 
+and I ended up writing a small VBA program in Excel to semi-automate the registration process. 
+I consider myself a fast learner and always seek and use the most suitable tool for the job or problem at hand. 
+I am also interested in other technologies and projects such as Groovy, Grails, Test Driven Development, Bitcoin, Docker, and LaTeX.
+\end{abstract}
+
+
 %%% Personal details
 %%% ------------------------------------------------------------
-\NewPart{Datos personales}{}
+\NewPart{Datos personales / Personal Details}{}
 
-\PersonalEntry{Dni}{40126410}
-\PersonalEntry{Nacimiento}{7 de febrero, 1979}
-\PersonalEntry{Dirección}{Condominio Real B7-304 Av. José Saco Rojas 1149 Carabayllo}
-\PersonalEntry{Teléfono}{(+51) 989 374 805}
+\PersonalEntry{Dni/ID}{40126410}
+\PersonalEntry{Nacimiento/Date of birth}{7 de febrero, 1979/February 7, 1979}
+\PersonalEntry{Dirección/Address}{Condominio Real B7-304 Av. José Saco Rojas 1149 Carabayllo}
+\PersonalEntry{Celular/Cellphone}{(+51) 989 374 805}
 \PersonalEntry{E--Mail}{\url{ecavero@gmail.com}}
+
+\sepspace
 
 
 %%% Education
 %%% ------------------------------------------------------------
-\NewPart{Estudios}{}
+\NewPart{Estudios / Education}{}
 
-\EducationEntry{Ingeniería de Sistemas e Informática}{1998 - presente}{Universidad Alas Peruanas}{}
+\EducationEntry{Ingeniería de Sistemas e Informática/Systems Engineering and Computer Science}{1998 - 2013}{Universidad Alas Peruanas}{}
 \sepspace
 
+\EducationEntry{Desarrollo de Software/Software Development}{2023 - presente/present}{ISIL}{}
+\sepspace
 
 %%% Work experience
 %%% ------------------------------------------------------------
 \NewPart{Experiencia laboral}{}
+\EducationEntry{Ingeniero de Configuraciones/Configuration Engineer}{Marzo/March 2021 - May/Mayo 2024}{Experis}{
+\begin{itemize}
+\item{Experiencia con el software de soluciones de precios Pricefx como Ingeniero de Configuración y parte del equipo que configura la lógica dentro de sus módulos, incluidos, pero no limitados a, Acuerdos y Promociones, Cotizaciones, Acuerdos de Rebates y Dashboards. Todo esto se realiza con el lenguaje de programación Groovy, que se utiliza para escribir dichas lógicas.}
+\item{Experience with Pricefx pricing solutions software as a Configuration Engineer and part of the team configuring logic within its modules, including but not limited to, Agreements and Promotions, Quotes, Rebate Agreements and Dashboards. All this is done with the Groovy programming language which is used for writing said logics.}
+\end{itemize}
+}
+\sepspace
 
-\EducationEntry{Analista de Sistemas}{Setiembre 2012 - Octubre 2019}{Grupo Vital}{
+\EducationEntry{Analista de Sistemas/Systems Analyst}{Mayo/May 2020 - Febrero/February 2021}{Materia Gris SAC}{
+\begin{itemize}
+\item{Parte del equipo de desarrollo para construir aplicaciones de acuerdo a las necesidades de los clientes}
+\item{Part of the development team for constructing applications according to the different
+customers’ needs.}
+\item{Fui capaz de aprender .NET y el framework de Angular por mi cuenta para ser parte del equipo responsable del desarrollo de características nuevas utilizando dichas tecnologías}
+\item{I was able to learn .NET and the Angular Framework on my own in order to be a part of the team responsible for developing new features for web applications built using these technologies.}
+\end{itemize}
+}
+\sepspace
+
+\EducationEntry{Analista de Sistemas/Systems Analyst}{Setiembre/September 2012 - Octubre/October 2019}{Grupo Vital}{
 \begin{itemize}
 \item{Parte del equipo de desarrollo del Sismedic.com \url{www.sismedic.com.pe} (sistema médico ocupacional web).}
+\item{Part of the development team of Sismedic.com \url{www.sismedic.com.pe} (occupational medical web system).}
 \item{He desarrollado mostrar el audiograma en el examen de Audiometría, el cuadro comparativo e informe del examen en Word.}
+\item{I developed the displaying of the audiogram in the Audiometry exam, the comparative chart, and the exam report in Word.}
 \item{He desarrollado la comunicación entre el softaware del audiómetro con el módulo de audiometría para que carguen los datos del examen.}
+\item{I developed the communication between the audiometer software and the audiometry module to load the exam data.}
 \item{He desarrollado la comunicación entre el software del espirómetro con el módulo de espirometría.}
+\item{I developed the communication between the spirometer software and the spirometry module.}
 \item{He desarrollado la base para el reemplazo de etiquetas en los informes ocupacionales en Word. También he desarrollado la base para la impresión masiva de estos documentos en un solo archivo.}
+\item{I developed the foundation for replacing tags in occupational reports in Word. I also developed the foundation for the mass printing of these documents in a single file.}
 \item{He apoyado en el desarrollo de una aplicación de escritorio en Java que permite a los auditores médicos imprimir los consentimientos, informes de exámenes e informes finales.}
+\item{I assisted in the development of a desktop application in Java that allows medical auditors to print consent forms, exam reports, and final reports.}
 \item{He desarrollado la comunicación entre el software del lector de firma y huella con el módulo de citas.}
+\item{I developed the communication between the signature and fingerprint reader software and the appointments module.}
 \end{itemize}
 }
 \sepspace
@@ -145,15 +197,17 @@
 \EducationEntry{Programador}{Mayo 2008 - Agosto 2012}{Universidad Ricardo Palma}{
 \begin{itemize}
 \item{Desarrollo y mantenimiento de los sistemas de información, especialmente el sistema de matrícula.}
+\item{Development and maintenance of information systems, especially the enrollment system.}
 \item{Desarrollé un módulo para la migración de los datos de los alumnos del sistema académico al Aula Virtual de la universidad. Las bases de datos fueron SQL Server 2000 y MySQL 5 respectivamente.}
+\item{I developed a module for migrating student data from the academic system to the university's Virtual Classroom. The databases used were SQL Server 2000 and MySQL 5, respectively.}
 \end{itemize}
 }
 \sepspace
 
-\NewPart{Conocimientos}{}{}{
+\NewPart{Conocimientos / Skills}{}{}{
 \begin{itemize}
-\item{Inglés: Escrito Nativo}
-\item{Inglés: Oral Nativo}
+\item{Inglés/English: Escrito Nativo/Fluent writer}
+\item{Inglés/English: Oral Nativo/Fluent speaker}
 \item{EJB: Semi Senior}
 \item{HTML: Semi Senior}
 \item{JEE: Semi Senior}
@@ -162,20 +216,31 @@
 \item{JSP:  Senior}
 \item{JSF/PrimeFaces: Semi Senior}
 \item{MS T-SQL: Junior}
-\item{Linux: Junior}
-\item{PC Windows 7: Junior}
+\item{Linux: Semi Senior}
+\item{PC Windows: Junior}
+\item{.NET: Junior}
+\item{Angular: Junior}
+\item{Springboot: Junior}
+\item{Docker: Junior}
 
 \end{itemize}
 }
+\sepspace
 
-\NewPart{Temas de Interés}{}{}{
+\NewPart{Temas de Interés / Topics of Interest}{}{}{
 \begin{itemize}
 \item{Groovy: Lenguaje de programación dinámica que corre en la JVM con el cual se pueden hacer scripts, aplicaciones de escritorio y aplicaciones web.}
+\item{Groovy: Dynamic programming language that runs on the JVM, with which you can create scripts, desktop applications, and web applications.}
 \item{Grails: Framework para desarrollo de aplicaciones web basado en Groovy.}
+\item{Grails: Framework for web application development based on Groovy.}
 \item{Test Driven Development (TDD): Práctica de Ingenería de Software que consiste en escribir las pruebas de una funcionalidad primero, luego implementar dicha funcionalidad y finalmente refactorizar.}
+\item{Test Driven Development (TDD): A Software Engineering practice that involves writing tests for a functionality first, then implementing the functionality, and finally refactoring.}
 \item{Bitcoin: Moneda digital descentralizada y programable. Esto abrió el camino a lo que ahora se conoce como la tecnología Blockchain.}
+\item{Bitcoin: Decentralized and programmable digital currency. This paved the way for what is now known as Blockchain technology.}
 \item{Docker: Una plataforma para que desarrolladores y administradores de sistemas puedan construir, desplegar y ejecutar aplicaciones distribuidas, ya sea en laptops, máquinas virtuales en producción o en la nube.}
+\item{Docker: A platform for developers and system administrators to build, deploy, and run distributed applications, whether on laptops, production virtual machines, or in the cloud.}
 \item{LaTex: Sistema de composición de textos, orientado a la creación de documentos. Es usado para la generación de artículos y libros científicos que incluyen, entre otros elementos, expresiones matemáticas.}
+\item{LaTex: Text composition system, oriented towards document creation. It is used for generating scientific articles and books that include, among other elements, mathematical expressions.}
 \end{itemize}
 }
 
