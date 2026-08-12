@@ -93,6 +93,13 @@
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
 
+\newcommand{\ProjectEntry}[4]{				  % Projects section
+		\noindent \textbf{#1} \hfill      % Project name
+		\noindent\colorbox{Black}{\color{White}#2} \par  % Duration
+		\noindent \textit{#3} \par              % Technologies
+		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
+		\normalsize \par}
+
 %%% Begin Document
 %%% ------------------------------------------------------------
 \begin{document}
@@ -204,6 +211,50 @@ customers’ needs.}
 }
 \sepspace
 
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Proyectos / Projects}{}
+
+\ProjectEntry{Linode VPS + Nginx + SSL con Terraform}{Junio/June 2024 - Presente/Present}{Terraform, Linode, Nginx, Let's Encrypt, Ubuntu 24.04}{
+\begin{itemize}
+\item{Provisión completa de infraestructura como código (IaC) para un servidor VPS en Linode con DNS, certificados SSL y proxy inverso Nginx para el dominio ecavero.space.}
+\item{Complete infrastructure-as-code (IaC) provisioning of a Linode VPS with DNS, SSL certificates, and Nginx reverse proxy for the domain ecavero.space.}
+\end{itemize}
+}
+\sepspace
+
+\ProjectEntry{Cloudflare DNS + IPv6 con Terraform}{Junio/June 2024 - Presente/Present}{Terraform, Cloudflare, Docker Compose, Nginx, IPv6}{
+\begin{itemize}
+\item{Gestión automática de registros DNS AAAA en Cloudflare con detección automática de IPv6 y proxy inverso Nginx vía Docker para un nodo Lightning en doméstico.}
+\item{Automatic Cloudflare DNS AAAA record management with IPv6 auto-detection and Docker-based Nginx reverse proxy for a home-hosted Lightning node.}
+\end{itemize}
+}
+\sepspace
+
+\ProjectEntry{Lightning Card -- Backend de Pagos Lightning}{Junio/June 2024 - Presente/Present}{Scala 3, Quarkus, LNURL, Lightning Network, NFC, Eclair, Docker}{
+\begin{itemize}
+\item{Servidor REST para aceptar pagos Bitcoin Lightning vía tarjeta NFC, implementando los estándares LNURL y Lightning Address (donar@ecavero.space), con integración a nodo Eclair.}
+\item{REST server for accepting Bitcoin Lightning payments via NFC card, implementing LNURL standards and Lightning Address (donar@ecavero.space), with Eclair node integration.}
+\end{itemize}
+}
+\sepspace
+
+\ProjectEntry{Lightning Superchat -- Monitor de Pagos Lightning}{Junio/June 2024 - Presente/Present}{Scala 3, Apache Pekko, WebSocket, Gradle Shadow}{
+\begin{itemize}
+\item{Demonio en tiempo real que monitorea pagos entrantes y salientes de un nodo Lightning vía WebSocket con reconexión automática y heartbeats.}
+\item{Real-time daemon that monitors incoming and outgoing Lightning node payments via WebSocket with automatic reconnection and heartbeats.}
+\end{itemize}
+}
+\sepspace
+
+\ProjectEntry{Air-Gapped Bitcoin Cold Storage}{Junio/June 2024 - Presente/Present}{Scala 3, Bitcoinj, Vagrant, VirtualBox, Docker, GPG, BIP39/BIP84/BIP86}{
+\begin{itemize}
+\item{Sistema completo de almacenamiento frío Bitcoin con generación de wallets (mnemonics BIP39 + descriptores BIP84/BIP86), construcción y firma offline de PSBTs en VMs air-gapped, y transmisión de la transacción firmada desde el host. Incluye generador de entropía con naipes físicos.}
+\item{Complete air-gapped Bitcoin cold storage system with wallet generation (BIP39 mnemonics + BIP84/BIP86 descriptors), offline PSBT construction and signing on air-gapped VMs, and signed transaction broadcasting from the host. Includes physical playing card entropy generator.}
+\end{itemize}
+}
+\sepspace
+
 \NewPart{Conocimientos / Skills}{}{}{
 \begin{itemize}
 \item{Inglés/English: Escrito Nativo/Fluent writer}
@@ -221,7 +272,17 @@ customers’ needs.}
 \item{.NET: Junior}
 \item{Angular: Junior}
 \item{Springboot: Junior}
-\item{Docker: Junior}
+\item{Docker: Semi Senior}
+\item{Scala 3: Semi Senior}
+\item{Terraform: Semi Senior}
+\item{Quarkus: Junior}
+\item{Apache Pekko: Junior}
+\item{Nginx: Semi Senior}
+\item{Cloudflare: Junior}
+\item{GPG: Junior}
+\item{Vagrant/VirtualBox: Junior}
+\item{Bitcoin (Core, Lightning, BIPs): Senior}
+\item{Gradle: Junior}
 
 \end{itemize}
 }
@@ -241,6 +302,12 @@ customers’ needs.}
 \item{Docker: A platform for developers and system administrators to build, deploy, and run distributed applications, whether on laptops, production virtual machines, or in the cloud.}
 \item{LaTex: Sistema de composición de textos, orientado a la creación de documentos. Es usado para la generación de artículos y libros científicos que incluyen, entre otros elementos, expresiones matemáticas.}
 \item{LaTex: Text composition system, oriented towards document creation. It is used for generating scientific articles and books that include, among other elements, mathematical expressions.}
+\item{Scala 3: Lenguaje de programación funcional y orientada a objetos que ejecuta en la JVM. Combina tipado fuerte con inferencia de tipos y soporte para programación reactiva.}
+\item{Scala 3: Functional and object-oriented programming language that runs on the JVM. Combines strong typing with type inference and support for reactive programming.}
+\item{Terraform: Herramienta de HashiCorp para infraestructura como código (IaC) que permite definir y provisionar infraestructura de forma declarativa en múltiples proveedores cloud.}
+\item{Terraform: HashiCorp's Infrastructure as Code (IaC) tool that enables defining and provisioning infrastructure declaratively across multiple cloud providers.}
+\item{Lightning Network: Red de pagos de segundo nivel (Layer 2) sobre Bitcoin que permite transacciones rápidas y de bajo costo mediante canales de pago bidireccionales.}
+\item{Lightning Network: Second-layer (Layer 2) payment network on Bitcoin that enables fast, low-cost transactions through bidirectional payment channels.}
 \end{itemize}
 }
 
